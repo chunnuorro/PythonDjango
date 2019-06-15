@@ -1,0 +1,31 @@
+Steps for installation of Python and Django:
+
+1. Install Python. All path in environment variable to avoid proble during other software installation. Verify install using 
+c:>python
+2. Install any editor
+3. Install Django:
+a. Create virtual environment for each project 
+	C:\Python\Projectname> python -m venv myvenv(Your envrionment name)
+b. After virtual environment is created, it will create some folder as well. Run command to active virtual environment.
+	G:\Python\Projectname> myvenv\Scripts\activate
+c. Once its active it will appear like this :
+	(myenv) G:\Python\django\myenv
+d. Now install updated installer(PIP)
+	(myenv) G:\Python\django\python -m pip install --upgrade pip
+e. Create a file in project folder named requirements.txt (This file tell installer which version of django want to install)
+    file content is : Django~=2.0.6
+	(myenv) G:\Python\django> python -m pip install -r requirements.txt
+f. run below command to install DJANGO:
+	(myenv) G:\Python\django\pip install -r requirements.txt
+g. Above steps will install django and create many folders
+h. to verify django installation run command
+	(myenv) G:\Python\django\myenv>python -m django --version
+i. run below command to create folder structure for your project called my_site:
+	(myenv) G:\Python\django\myenv>django-admin startproject my_site
+j. Run this command to create database : 
+	(myenv) G:\Python\django\myenv\my_site>python manage.py migrate
+k. Run server 
+	(myenv) G:\Python\django\myenv\my_site>python manage.py runserver
+l. Verify url if all set :
+	http://127.0.0.1:8000/
+
